@@ -1,7 +1,7 @@
 import { useState, useRef, useEffect } from "react";
-import { useSocket } from "./hooks/useSocket";
+import { useSocket } from "../../hooks/useSocket";
 import { SafetyOverlay } from "./SafetyOverlay";
-import { sendFlagAlert } from "./api/auth";
+import { sendFlagAlert } from "../../api/auth";
 
 const contacts = [
   { id: 1, initials: "AK", name: "Alex K.",  last: "Hey are you free later?",   color: "#1e3a5f", text: "#60a5fa" },

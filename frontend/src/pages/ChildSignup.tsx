@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { signup } from "./api/auth";
+import { signup } from "../api/auth";
 
 interface Props {
   onSignup: () => void;

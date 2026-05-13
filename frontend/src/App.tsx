@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
-import { ChatWindow } from "./ChatWindow";
-import { LoginPage } from "./LoginPage";
-import { SignupPage } from "./SignupPage";
+import { ChatWindow } from "./pages/child/ChatWindow";
+import { LoginPage } from "./pages/LoginPage";
+import { SignupPage } from "./pages/ChildSignup";
 
 type Page = "login" | "signup" | "chat";
 

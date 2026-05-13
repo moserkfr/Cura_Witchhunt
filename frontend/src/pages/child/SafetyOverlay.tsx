@@ -1,6 +1,6 @@
 // frontend/src/SafetyOverlay.tsx
 import React from "react";
-import type { SafetyFlag } from "./hooks/useSocket";
+import type { SafetyFlag } from "../../hooks/useSocket";
 
 interface Props {
   flag: SafetyFlag;
