@@ -1,0 +1,26 @@
+# Frontend Dependencies
+# Run: npm install
+
+react
+react-dom
+typescript
+vite
+@vitejs/plugin-react
+
+# Socket.IO client
+socket.io-client
+
+# Animation (used in parent dashboard)
+framer-motion
+
+# Icons (used in parent dashboard sidebar)
+lucide-react
+
+# Font Awesome (used in login/signup password toggle)
+# Added via CDN in index.html — no npm install needed
+# <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+# Tailwind CSS (used in parent dashboard)
+tailwindcss
+autoprefixer
+postcss
