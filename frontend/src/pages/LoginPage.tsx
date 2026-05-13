@@ -107,7 +107,7 @@ export const LoginPage = ({ onLogin, onGoSignup }: Props) => {
 
           {/* Bottom links */}
           <div style={{ display: "flex", justifyContent: "space-between", marginTop: 20 }}>
-            <span onClick={onGoSignup} style={{ color: "#5b2d8e", fontSize: 12, cursor: "pointer" }}>Create an account</span>
+            <span onClick={onGoSignup} style={{ color: "#5b2d8e", fontSize: 12, cursor: "pointer" }}>← Back to home</span>
             <span style={{ color: "#5b2d8e", fontSize: 12, cursor: "pointer" }}>Forgot password</span>
           </div>
         </div>

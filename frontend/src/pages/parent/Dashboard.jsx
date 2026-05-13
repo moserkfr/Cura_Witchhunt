@@ -11,7 +11,7 @@ import children from "../../data/children"
 import { useState, useEffect } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 
-function Dashboard() {
+function Dashboard({ onLogout }) {
 
   const [activePage, setActivePage] = useState("dashboard")
   const [selectedChild, setSelectedChild] = useState(children[0])
@@ -130,6 +130,7 @@ function Dashboard() {
           setActivePage={setActivePage}
           selectedChild={selectedChild}
           setSelectedChild={setSelectedChild}
+          onLogout={onLogout}
         />
 
         {/* MAIN CONTENT */}

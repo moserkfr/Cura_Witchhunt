@@ -28,7 +28,8 @@ const TypingDots = () => (
   </div>
 );
 
-export const ChatWindow = () => {
+interface ChatProps { onLogout?: () => void; }
+export const ChatWindow = ({ onLogout }: ChatProps) => {
   const { messages: socketMessages, sendMessage, safetyFlag, setSafetyFlag, clearFlag } = useSocket("http://localhost:3001");
   const [messages, setMessages] = useState<Message[]>([]);
   const [input, setInput] = useState("");
@@ -86,11 +87,16 @@ export const ChatWindow = () => {
       <div style={{ width: 360, flexShrink: 0, background: "#111b21", borderRight: "1px solid #222d34", display: "flex", flexDirection: "column", overflow: "hidden" }}>
 
         {/* Sidebar Header */}
-        <div style={{ flexShrink: 0, padding: "14px 20px", background: "#202c33", display: "flex", alignItems: "center" }}>
+        <div style={{ flexShrink: 0, padding: "12px 16px", background: "#202c33", display: "flex", alignItems: "center", justifyContent: "space-between" }}>
           <div>
             <div style={{ fontWeight: 700, fontSize: 22, color: "#00a884", letterSpacing: 1 }}>CURA</div>
             <div style={{ color: "#8696a0", fontSize: 13, marginTop: 2 }}>The Guard that never sleeps</div>
           </div>
+          {onLogout && (
+            <button onClick={onLogout} style={{ background: "transparent", border: "1px solid #374045", borderRadius: 8, color: "#8696a0", fontSize: 12, cursor: "pointer", padding: "6px 12px" }}>
+              Log out
+            </button>
+          )}
         </div>
 
         {/* Search */}
